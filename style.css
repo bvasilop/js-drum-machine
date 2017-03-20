@@ -13,8 +13,8 @@ body,html {
 .drum-machine {
   display: flex;
   min-height: 100vh;
-  align-items: center;
-  justify-content: center;
+  margin-top: 200px;
+  margin-left: 10px;
 }
 
 .drum-pad {
