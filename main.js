@@ -13,11 +13,46 @@ function playDrums(e) {
   key.classList.add('play');
   audio.currentTime = 0;
   audio.play();
+  renderDisplay(e);
 }
 
 function removeTransition(e) {
   if (e.propertyName !== 'transform') return;
   e.target.classList.remove('play');
+}
+
+function renderDisplay(e) {
+  // console.log(e.keyCode);
+  
+  if (e.keyCode === 81) {
+    drumType = 'Clap';
+  }
+  if (e.keyCode === 87) {
+    drumType = 'Hihat';
+  }
+  if (e.keyCode === 69) {
+    drumType = 'Kick';
+  }
+  if (e.keyCode === 65) {
+    drumType = 'Openhat';
+  }
+  if (e.keyCode === 83) {
+    drumType = 'Boom';
+  }
+  if (e.keyCode === 68) {
+    drumType = 'Ride';
+  }
+  if (e.keyCode === 90) {
+    drumType = 'Snare';
+  }
+  if (e.keyCode === 88) {
+    drumType = 'Tom';
+  }
+  if (e.keyCode === 67) {
+    drumType = 'Tink';
+  }
+
+  document.getElementById('display').textContent = drumType;
 }
 
 const drumPads = Array.from(document.querySelectorAll('.drum-pad'));
