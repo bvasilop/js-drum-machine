@@ -24,33 +24,9 @@ function removeTransition(e) {
 function renderDisplay(e) {
   // console.log(e.keyCode);
   
-  if (e.keyCode === 81) {
-    drumType = 'Clap';
-  }
-  if (e.keyCode === 87) {
-    drumType = 'Hihat';
-  }
-  if (e.keyCode === 69) {
-    drumType = 'Kick';
-  }
-  if (e.keyCode === 65) {
-    drumType = 'Openhat';
-  }
-  if (e.keyCode === 83) {
-    drumType = 'Boom';
-  }
-  if (e.keyCode === 68) {
-    drumType = 'Ride';
-  }
-  if (e.keyCode === 90) {
-    drumType = 'Snare';
-  }
-  if (e.keyCode === 88) {
-    drumType = 'Tom';
-  }
-  if (e.keyCode === 67) {
-    drumType = 'Tink';
-  }
+  const drumData = document.querySelector(`div[data-key="${e.keyCode}"]`);
+  // console.log(drumData.dataset.drum);
+  const drumType = drumData.dataset.drum;
 
   const drumBox = document.getElementById('display');
   drumBox.classList.add('play');
