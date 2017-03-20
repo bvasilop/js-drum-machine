@@ -30,7 +30,20 @@ body,html {
   background: white;
 }
 
-.play-drum {
+#display {
+  border: .4rem solid grey;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  transition: all .07s ease;
+  width: 5rem;
+  text-align: center;
+  color: black;
+  background: white;
+}
+
+.play {
   transform: scale(1.1);
   border-color: #ffc600;
   box-shadow: 0 0 1rem #ffc600;
