@@ -52,9 +52,16 @@ function renderDisplay(e) {
     drumType = 'Tink';
   }
 
+  const drumBox = document.getElementById('display');
+  drumBox.classList.add('play');
+
   document.getElementById('display').textContent = drumType;
 }
 
 const drumPads = Array.from(document.querySelectorAll('.drum-pad'));
 drumPads.forEach(pad => pad.addEventListener('transitionend', removeTransition));
+
+const drumBox = document.getElementById('display');
+drumBox.addEventListener('transitionend', removeTransition);
+
 window.addEventListener('keydown', playDrums);
